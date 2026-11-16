@@ -17,3 +17,15 @@ def logarithmic(a,b):
     return math.log(a,b)
 def exponent(a,b):
     return a**b
+
+def square_root(a):
+    try:
+        return math.sqrt(a)
+    except ZeroDivisionError:
+        raise ValueError("Cannot take square root of negative number")
+
+def hypotneuse(a,b):
+    try:
+        return math.hypot(a,b)
+    except (TypeError, ValueError):
+        return ValueError("Invalid hypotneuse arguments")
