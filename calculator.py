@@ -33,3 +33,28 @@ def hypotneuse(a,b):
         return math.hypot(a,b)
     except (TypeError, ValueError):
         return ValueError("Invalid hypotneuse arguments")
+
+
+def test_multiply(self):
+    self.assertEqual(calculator.multiply(3, 4), 12)
+    self.assertEqual(calculator.multiply(-2, 5), -10)
+
+
+def test_divide(self):
+    self.assertAlmostEqual(calculator.divide(2, 10), 5)
+    self.assertAlmostEqual(calculator.divide(4, 9), 2.25)
+
+
+def test_log_invalid_argument(self):
+    self.assertRaises(ValueError, calculator.logarithm, 2, -10)
+    self.assertRaises(ValueError, calculator.logarithm, 2, 0)
+
+
+def test_hypotenuse(self):
+    self.assertAlmostEqual(calculator.hypotenuse(3, 4), 5)
+    self.assertAlmostEqual(calculator.hypotenuse(-3, -4), 5)
+
+
+def test_sqrt(self):
+    self.assertAlmostEqual(calculator.square_root(16), 4)
+    self.assertRaises(ValueError, calculator.square_root, -9)
